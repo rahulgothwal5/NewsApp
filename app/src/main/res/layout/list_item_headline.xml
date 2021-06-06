@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccParent"
+                android:layout_width="match_parent"
+                android:paddingEnd="5dp"
+                android:layout_height="wrap_content"
+                android:padding="2dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPreview"
+                    imageUrl="@{headline.urlToImage}"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@id/ccParent"
+                    app:layout_constraintDimensionRatio="1:1"
+
+                    app:layout_constraintTop_toTopOf="@id/ccParent"
+                    app:srcCompat="@drawable/ic_newspaper" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSource"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="start"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/ccParent"
+                    app:layout_constraintStart_toEndOf="@id/ivPreview"
+                    app:layout_constraintTop_toTopOf="@id/ccParent"
+                    tools:text="@{headline.source.name}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="start"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/tvPublishTime"
+                    app:layout_constraintEnd_toEndOf="@id/ccParent"
+                    app:layout_constraintStart_toStartOf="@id/tvSource"
+                    app:layout_constraintTop_toBottomOf="@id/tvSource"
+                    tools:text="@{headline.title}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPublishTime"
+                    fancyDate="@{headline.publishedAt}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ccParent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="headline"
+            type="com.warlock.newsapp.model.Article" />
+    </data>
+
+</layout>

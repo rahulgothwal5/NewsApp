@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NewsApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#BB86FC</item>
+        <item name="colorPrimaryVariant">#3801B5</item>
+        <item name="colorOnPrimary">#121212</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#03DAC6</item>
+        <item name="colorSecondaryVariant">#03DAC6</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Background color. -->
+        <item name="android:colorBackground">#121212</item>
+        <item name="colorOnBackground">#000000</item>
+
+        <item name="colorSurface">#121212</item>
+        <item name="colorOnSurface">#121212</item>
+
+        <item name="colorError">#CF6679</item>
+        <item name="colorOnError">#000000</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#3801B5</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

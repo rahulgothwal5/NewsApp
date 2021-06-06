@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="drawable_padding">3dp</dimen>
+    <dimen name="text_size_lbl">13sp</dimen>
+    <dimen name="padding_lbl">5dp</dimen>
+</resources>

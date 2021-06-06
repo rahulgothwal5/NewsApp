@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort_category"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/sort_by_category"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/action_sort_default"
+                    android:checked="true"
+                    android:title="@string/default_" />
+                <item
+                    android:id="@+id/action_sort_business"
+                    android:title="@string/business" />
+                <item
+                    android:id="@+id/action_sort_entertainment"
+                    android:title="@string/entertainment" />
+                <item
+                    android:id="@+id/action_sort_general"
+                    android:title="@string/general" />
+                <item
+                    android:id="@+id/action_sort_health"
+                    android:title="@string/health" />
+                <item
+                    android:id="@+id/action_sort_science"
+                    android:title="@string/science" />
+                <item
+                    android:id="@+id/action_sort_sports"
+                    android:title="@string/sports" />
+                <item
+                    android:id="@+id/action_sort_technology"
+                    android:title="@string/technology" />
+            </group>
+        </menu>
+    </item>
+
+
+</menu>
