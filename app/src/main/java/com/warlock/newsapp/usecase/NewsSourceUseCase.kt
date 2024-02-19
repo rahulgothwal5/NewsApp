@@ -3,8 +3,10 @@ package com.warlock.newsapp.usecase
 import com.warlock.newsapp.model.SourceListData
 import com.warlock.newsapp.network.ResultData
 import com.warlock.newsapp.repository.DataRepository
+import dagger.hilt.android.scopes.ViewModelScoped
 import javax.inject.Inject
 
+@ViewModelScoped
 class NewsSourceUseCase @Inject constructor(
     private val dataRepository: DataRepository
 ) {

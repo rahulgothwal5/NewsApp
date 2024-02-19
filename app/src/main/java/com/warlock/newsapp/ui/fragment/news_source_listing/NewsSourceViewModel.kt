@@ -1,6 +1,5 @@
 package com.warlock.newsapp.ui.fragment.news_source_listing
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import com.warlock.newsapp.model.NewsSource
@@ -8,10 +7,13 @@ import com.warlock.newsapp.model.SourceListData
 import com.warlock.newsapp.network.ResultData
 import com.warlock.newsapp.ui.fragment.base.BaseViewModel
 import com.warlock.newsapp.usecase.NewsSourceUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
-class NewsSourceViewModel @ViewModelInject constructor(
+@HiltViewModel
+class NewsSourceViewModel @Inject constructor(
     private val newsSourceUseCase: NewsSourceUseCase
 ) : BaseViewModel() {
 
